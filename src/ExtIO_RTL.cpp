@@ -607,7 +607,12 @@ int Stop_Thread()
 	rtlsdr_cancel_async(dev);
 	// Wait 1s for thread to die
 	WaitForSingleObject(worker_handle,INFINITE);
-	CloseHandle(worker_handle);
+	
+	// The handle from "_beginthread()" shouldn't be closed manually? Refer below.
+	// https://devblogs.microsoft.com/oldnewthing/20170929-00/?p=97115
+	// Calling "CloseHandle()" causes an exception.
+	// CloseHandle(worker_handle);
+
 	worker_handle=INVALID_HANDLE_VALUE;
 	return 0;
 }
