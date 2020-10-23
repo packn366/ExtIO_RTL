@@ -1,6 +1,6 @@
 /*
  * ExtIO wrapper for librtlsdr
- * Copyleft by JosÈ Ara˙jo [josemariaaraujo@gmail.com]
+ * Copyleft by JosÅEAra˙jo [josemariaaraujo@gmail.com]
  * Don't care about licenses (DWTFYW), but per GNU I think I'm required to leave the following here:
  *
  * Based on original work from Ian Gilmour (MM6DOS) and Youssef Touil from SDRSharp
@@ -166,7 +166,7 @@ bool  LIBRTL_API __stdcall InitHW(char *name, char *model, int& type)
 
 	type = EXTIO_HWTYPE_16B; /* ExtIO type 16-bit samples */
 	
-//	fprintf(stderr, "S„o %d dispositivos. O primeiro È %s %s\n", device_count, name, model);
+//	fprintf(stderr, "S„o %d dispositivos. O primeiro ÅE%s %s\n", device_count, name, model);
 
 	return TRUE;
 }
@@ -412,7 +412,7 @@ int   LIBRTL_API __stdcall ExtIoSetAGC (int agc_idx)
 {
 	//MessageBox(NULL, TEXT("ExtIoSetAGC"),NULL, MB_OK);
 							TCHAR str[255];
-							_stprintf_s(str,255, TEXT("O valor È %d, era %d"), agc_idx, HDSDR_AGC);
+							_stprintf_s(str,255, TEXT("O valor ÅE%d, era %d"), agc_idx, HDSDR_AGC);
 							MessageBox(NULL, str, NULL, MB_OK);
 	HDSDR_AGC = agc_idx;
 	//if (HDSDR_AGC==0) HDSDR_AGC=3;
@@ -728,7 +728,7 @@ static INT_PTR CALLBACK MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPAR
 					//	else
 					//	{
 					//		TCHAR str[255];
-					//		_stprintf_s(str,255, TEXT("O valor È %d"), _ttoi(ppm));
+					//		_stprintf_s(str,255, TEXT("O valor ÅE%d"), _ttoi(ppm));
 					//		MessageBox(NULL, str, NULL, MB_OK);
 					//	}
                     }
@@ -797,7 +797,7 @@ static INT_PTR CALLBACK MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPAR
 						//ComboBox_GetLBText((HWND) lParam,ComboBox_GetCurSel((HWND) lParam),ListItem);
 						//MessageBox(NULL, ListItem, TEXT("Item Selected"), MB_OK);
 						//TCHAR str[255];
-						//_stprintf(str, TEXT("O valor È %d"), samplerates[ComboBox_GetCurSel((HWND) lParam)].value);
+						//_stprintf(str, TEXT("O valor ÅE%d"), samplerates[ComboBox_GetCurSel((HWND) lParam)].value);
 						//MessageBox(NULL, str, NULL, MB_OK);
                     }
 					if(GET_WM_COMMAND_CMD(wParam, lParam) ==  CBN_EDITUPDATE)
@@ -825,7 +825,7 @@ static INT_PTR CALLBACK MainDlgProc(HWND hwndDlg, UINT uMsg, WPARAM wParam, LPAR
 						}
 
 						//TCHAR str[255];
-						//_stprintf(str, TEXT("O valor È %d"), newrate);
+						//_stprintf(str, TEXT("O valor ÅE%d"), newrate);
 						//MessageBox(NULL, str, NULL, MB_OK);
                     }
 					//MessageBox(NULL,TEXT("Bitrate"),TEXT("Mensagem"),MB_OK);
